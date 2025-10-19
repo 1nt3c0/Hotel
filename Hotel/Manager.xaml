@@ -1,0 +1,177 @@
+﻿<Window x:Class="Hotel.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        FontFamily="Bahnschrift"
+        mc:Ignorable="d"
+        Icon="Res/img/Logo.jpg"
+        Background="#7395AE"
+        Title="Менеджер по бронированию" Height="580" Width="600">
+
+    <Grid Margin="10" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Text="Бронирование" FontSize="24" FontWeight="Bold" Grid.Row="0"  Grid.Column="0"  HorizontalAlignment="Center" Margin="0,10,0,10" Foreground="GhostWhite"/>
+        <Button x:Name="BTNback" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Style="{StaticResource BTNback}" Width="50" Height="50" Click="BTNback_Click"/>
+
+        <TabControl Grid.Row="1" HorizontalAlignment="Center" Width="500" Background="#7FE1D7F7">
+            <TabItem Header="Список гостей (без брони)" Height="30">
+                <GroupBox Header="Гости" Padding="1" FontSize="14" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="0,30,0,0">
+                    <StackPanel >
+                        <DataGrid x:Name="DGguest" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}"/>
+                                <DataGridTextColumn Header="Имя" Binding="{Binding Имя}"/>
+                                <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество}"/>
+                                <DataGridTextColumn Header="Серия" Binding="{Binding Паспорт.Серия}"/>
+                                <DataGridTextColumn Header="Номер" Binding="{Binding Паспорт.Номер}"/>
+                                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Паспорт.Дата_рождения, StringFormat='{}{0:dd.MM.yyyy}'}"/>
+                                <DataGridTextColumn Header="Номер телефона" Binding="{Binding Номер_телефона}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button x:Name="BTNdelGuest" Style="{StaticResource BTNdelGuest}" Width="150" Height="35" Click="BTNdelGuest_Click"/>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+
+            <TabItem Header="Регистрирование гостя" Height="30">
+                <GroupBox Header="Данные гостя" Padding="1" FontSize="14" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="0,30,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Поля ввода -->
+                        <TextBlock Text="Фамилия" Grid.Row="0" Grid.Column="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="TBsurname" Grid.Row="0" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                        <TextBlock Text="Имя" Grid.Row="1" Grid.Column="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="TBname" Grid.Row="1" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                        <TextBlock Text="Отчество" Grid.Row="2" Grid.Column="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="TBpatronynic" Grid.Row="2" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                        <TextBlock Text="Телефон" Grid.Row="3" Grid.Column="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="TBnumPhone" Grid.Row="3" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                        <TextBlock Text="Серия паспорта" Grid.Row="4" FontSize="16" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="TBpassportSeries" Grid.Row="4" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                        <TextBlock Text="Номер паспорта" Grid.Row="5" Grid.Column="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="TBpassportNum" Grid.Row="5" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                        <TextBlock Text="Дата рождения" Grid.Row="6" Grid.Column="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <DatePicker x:Name="DPborn" Grid.Row="6" Grid.Column="1" Height="25"  />
+
+                        <Button x:Name="BTNaddGuest" Grid.Row="7" Grid.Column="0" FontSize="18" Grid.ColumnSpan="2" Height="35" Content="Добавить гостя" Style="{StaticResource BTNguest}" Margin="0,10" Click="BTNaddGuest_Click" />
+                    </Grid>
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="Оформление брони" >
+                <StackPanel Grid.Row="1" Grid.Column="1" Width="250">
+                    <GroupBox Header="Номер" Grid.Row="1" Grid.Column="1" Height="60" FontSize="16" VerticalAlignment="Top" Margin="0,30,0,0">
+                        <ComboBox x:Name="CBtypeRoom" Width="200" Height="25" SelectionChanged="CBtypeRoom_SelectionChanged">
+                            <ComboBoxItem Content="Одноместный номер"/>
+                            <ComboBoxItem Content="Двухместный номер"/>
+                            <ComboBoxItem Content="Люкс номер"/>
+                        </ComboBox>
+                    </GroupBox>
+                    <GroupBox Header="Свободные номера" FontSize="16" Height="60" VerticalAlignment="Top" Margin="0,10,0,0">
+                        <ComboBox x:Name="CBfreeRooms" Width="200" Height="25"/>
+                    </GroupBox>
+                    <GroupBox Header="Гость" Height="60" FontSize="16" VerticalAlignment="Top" Margin="0,10,0,0" >
+                        <ComboBox x:Name="CBchooseGuest" Width="200" Height="25"/>
+                    </GroupBox>
+                    <GroupBox Header="С какого числа бронь" Height="60" FontSize="16" VerticalAlignment="Top" Margin="0,10,0,0" >
+                        <DatePicker x:Name="DPfirstDate" Grid.Row="5" Grid.Column="1" Height="25"/>
+                    </GroupBox>
+                    <GroupBox Header="По какое число бронь" Height="60" FontSize="16" VerticalAlignment="Top" Margin="0,10,0,0" >
+                        <DatePicker x:Name="DPlastDate" Grid.Row="5" Grid.Column="1" Height="25"/>
+                    </GroupBox>
+
+
+                    <Button x:Name="BTNbooking" Content="Забронировать" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" HorizontalAlignment="Center" Margin="0,10" Width="150" Height="35" Style="{StaticResource BTNbooking}" Click="BTNbooking_Click"/>
+
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+
+
+        <!-- Данные гостя -->
+        <!--<GroupBox Header="Данные гостя" Padding="10" Grid.Row="1" Grid.Column="0"  Width="300" VerticalAlignment="Top" Margin="0,30,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                -->
+        <!-- Поля ввода -->
+        <!--
+                <TextBlock Text="Фамилия" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBsurname" Grid.Row="0" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <TextBlock Text="Имя" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBname" Grid.Row="1" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <TextBlock Text="Отчество" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBpatronynic" Grid.Row="2" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <TextBlock Text="Серия паспорта" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBpassportSeries" Grid.Row="3" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <TextBlock Text="Номер паспорта" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBpassportNum" Grid.Row="4" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <TextBlock Text="Дата рождения" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <DatePicker x:Name="TBborn" Grid.Row="5" Grid.Column="1" Height="25"  />
+            </Grid>
+        </GroupBox>-->
+
+
+        <!--<StackPanel Grid.Row="1" Grid.Column="1">
+            <GroupBox Header="Услуга" Grid.Row="1" Grid.Column="1" Height="50" VerticalAlignment="Top" Margin="0,30,0,0">
+                <ComboBox x:Name="CBservices" Width="110" Height="20"/>
+            </GroupBox>
+            <GroupBox Header="Свободные номера" Grid.Row="1" Grid.Column="1"  Height="50" VerticalAlignment="Top" Margin="0,10,0,0">
+                <ComboBox x:Name="CBfreeRooms" Width="100" Height="20"/>
+            </GroupBox>
+        </StackPanel>-->
+
+
+    </Grid>
+</Window>

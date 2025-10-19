@@ -1,0 +1,60 @@
+﻿<Window x:Class="Hotel.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:easy="clr-namespace:EasyCaptcha.Wpf;assembly=EasyCaptcha.Wpf"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel"
+        mc:Ignorable="d"
+        Background="#7395AE"
+        Icon="Res/img/Logo.jpg"
+        FontFamily="Bahnschrift"
+        Title="Authorization" Height="450" Width="500">
+    <Grid Margin="10" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Авторизация" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="25" Grid.Row="0"  Grid.Column="0"  HorizontalAlignment="Center" Margin="0,10,0,10" Foreground="GhostWhite"/>
+
+        <GroupBox Grid.Row="1" Background="#7FE1D7F7" Grid.Column="0" Grid.ColumnSpan="3" Height="Auto" Padding="1" FontSize="14" VerticalAlignment="Top" Margin="0,30,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Логин" Grid.Column="0" Grid.Row="0" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBlogin" Grid.Row="0" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <TextBlock Text="Пароль" Grid.Column="0" Grid.Row="1" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="TBpassword" Grid.Row="1" Grid.Column="1" Height="25" Style="{StaticResource TBbooking}"/>
+
+                <StackPanel x:Name="SPcaptcha" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" Visibility="Collapsed">
+                    <TextBlock Text="ОШИБКА неправильный логин или пароль!!! Введите капчу" Foreground="red"/>
+                    <easy:Captcha x:Name="MyCaptcha" Width="180" Height="50" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                    <TextBox x:Name="TBcaptcha" Style="{StaticResource TBbooking}" Height="25" Width="180"/>
+                    <Button x:Name="BTNcaptcha" Content="Обновить" Style="{StaticResource BTNcaptcha}" Width="150" Height="35" Margin="0,0,0,0" Click="BTNcaptcha_Click"/>
+                </StackPanel>
+
+                <Button x:Name="BTNauthorization" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource BTNauthorization}" Width="200" Height="35" Margin="0,10" Click="BTNauthorization_Click"/>
+            </Grid>
+        </GroupBox>
+        
+    </Grid>
+</Window>
