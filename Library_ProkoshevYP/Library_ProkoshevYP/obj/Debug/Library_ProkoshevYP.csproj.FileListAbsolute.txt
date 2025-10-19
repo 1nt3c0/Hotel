@@ -1,0 +1,24 @@
+Z:\Прокошев_УП-01.01\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.dll
+Z:\Прокошев_УП-01.01\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.pdb
+Z:\Прокошев_УП-01.01\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.AssemblyReference.cache
+Z:\Прокошев_УП-01.01\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.CoreCompileInputs.cache
+Z:\Прокошев_УП-01.01\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.dll
+Z:\Прокошев_УП-01.01\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.pdb
+C:\Users\usersql\Desktop\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.dll
+C:\Users\usersql\Desktop\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.pdb
+C:\Users\usersql\Desktop\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.AssemblyReference.cache
+C:\Users\usersql\Desktop\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.CoreCompileInputs.cache
+C:\Users\usersql\Desktop\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.dll
+C:\Users\usersql\Desktop\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.pdb
+C:\Users\usersql\Desktop\Прокошев Курсовой\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.dll
+C:\Users\usersql\Desktop\Прокошев Курсовой\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.pdb
+C:\Users\usersql\Desktop\Прокошев Курсовой\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.AssemblyReference.cache
+C:\Users\usersql\Desktop\Прокошев Курсовой\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.CoreCompileInputs.cache
+C:\Users\usersql\Desktop\Прокошев Курсовой\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.dll
+C:\Users\usersql\Desktop\Прокошев Курсовой\Прокошев курсовой\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.pdb
+C:\Users\usersql\Desktop\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.dll
+C:\Users\usersql\Desktop\Library_ProkoshevYP\Library_ProkoshevYP\bin\Debug\Library_ProkoshevYP.pdb
+C:\Users\usersql\Desktop\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.AssemblyReference.cache
+C:\Users\usersql\Desktop\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.csproj.CoreCompileInputs.cache
+C:\Users\usersql\Desktop\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.dll
+C:\Users\usersql\Desktop\Library_ProkoshevYP\Library_ProkoshevYP\obj\Debug\Library_ProkoshevYP.pdb
